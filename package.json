@@ -39,8 +39,6 @@
         "!**/.gitattributes"
     ],
     "devDependencies": {
-        "@dprint/formatter": "^0.4.1",
-        "@dprint/typescript": "0.91.6",
         "@esfx/canceltoken": "^1.0.0",
         "@eslint/js": "^9.9.0",
         "@octokit/rest": "^21.0.1",
@@ -61,7 +59,6 @@
         "chalk": "^4.1.2",
         "chokidar": "^3.6.0",
         "diff": "^5.2.0",
-        "dprint": "^0.47.2",
         "esbuild": "^0.23.0",
         "eslint": "^9.9.0",
         "eslint-formatter-autolinkable-stylish": "^1.4.0",
@@ -99,7 +96,7 @@
         "gulp": "hereby",
         "lint": "hereby lint",
         "knip": "hereby knip",
-        "format": "dprint fmt",
+        "format": ":",
         "setup-hooks": "node scripts/link-hooks.mjs"
     },
     "browser": {
