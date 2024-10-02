@@ -5,8 +5,6 @@
  * bundle as namespaces again, even though the project is modules.
  */
 
-import * as dprintFormatter from "@dprint/formatter";
-import * as dprintTypeScript from "@dprint/typescript";
 import assert, { fail } from "assert";
 import fs from "fs";
 import minimist from "minimist";
@@ -492,6 +490,7 @@ if (publicContents.includes("@internal")) {
     console.error("Output includes untrimmed @internal nodes!");
 }
 
+/*
 const buffer = fs.readFileSync(dprintTypeScript.getPath());
 const formatter = dprintFormatter.createFromBuffer(buffer);
 formatter.setConfig({
@@ -502,11 +501,13 @@ formatter.setConfig({
 }, {
     quoteStyle: "preferDouble",
 });
+*/
 
 /**
  * @param {string} contents
  * @returns {string}
  */
+/*
 function dprint(contents) {
     const result = formatter.formatText({ filePath: "dummy.d.ts", fileText: contents });
     return result.replace(/\r\n/g, "\n");
@@ -514,3 +515,7 @@ function dprint(contents) {
 
 fs.writeFileSync(output, dprint(publicContents));
 fs.writeFileSync(internalOutput, dprint(internalContents));
+*/
+
+fs.writeFileSync(output, publicContents);
+fs.writeFileSync(internalOutput, internalContents);
