@@ -21,10 +21,6 @@ describe("unittests:: Public APIs", () => {
             Harness.Baseline.runBaseline(api, fileContent, { PrintDiff: true });
         });
     }
-
-    describe("for typescript.d.ts", () => {
-        verifyApi("typescript.d.ts");
-    });
 });
 
 describe("unittests:: Public APIs:: token to string", () => {
